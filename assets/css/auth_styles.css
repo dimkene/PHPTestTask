@@ -1,0 +1,50 @@
+.auth_form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DejaVu Sans Mono, monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth_form > input {
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    width: 400px;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+}
+
+.auth_form > button {
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+}
+
+.auth_form > button:hover {
+    background: #778899;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.auth_form > p > a {
+    color: #708090;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth_form > p {
+    font-size: 12px;
+}
+
+.auth_msg {
+    width: 400px;
+    height: 20px;
+    color: #757575;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,54 @@
+.reg_form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DejaVu Sans Mono, monospace;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg_form > input {
+    margin: 5px 0;
+    padding: 5px;
+    border: unset;
+    width: 400px;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+    color: #757575;
+}
+
+.reg_form > button {
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+}
+
+.reg_form > button:hover {
+    background: #778899;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.reg_form > select {
+    width: 400px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+    color: #757575;
+}
+
+.reg_msg {
+    width: 400px;
+    height: 20px;
+    color: #757575;
+    text-align: center;
+    font-weight: bold;
+}

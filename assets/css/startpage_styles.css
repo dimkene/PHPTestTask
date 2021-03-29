@@ -1,0 +1,56 @@
+.header_styles {
+    width: 100%;
+    height: 5vh;
+    border-spacing: 0;
+}
+
+.header_styles_left {
+    width: 50%;
+    vertical-align: top;
+    font-family: DejaVu Sans Mono, monospace;
+    color: #757575;
+    font-weight: bold;
+    border-bottom: 2px solid #778899;
+}
+
+.header_styles_right {
+    width: 50%;
+    vertical-align: top;
+    text-align: right;
+    border-bottom: 2px solid #778899;
+}
+
+.exit_form > button {
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+}
+
+.exit_form > button:hover {
+    background: #778899;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    vertical-align: top;
+    border-right: 2px solid #778899;
+    height: 95vh;
+}
+
+.sidebar_link {
+    font-family: DejaVu Sans Mono, monospace;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.general_content {
+    vertical-align: top;
+    text-align: right;
+    height: 95vh;
+}
