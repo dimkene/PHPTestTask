@@ -1,6 +1,8 @@
 <?php
     session_start();
-    
+    if (empty($_COOKIE['login'])){
+        header("Location: enter.php");
+    }
 ?>
 
 <!doctype html>
@@ -27,17 +29,20 @@
             </tr>
         </table>
     </header>
-    <body>
+    <body style="border: 2px solid #778899">
         <!-- Основная страница -->
         <table >
             <tr>
                 <td class="sidebar">
                     <!-- Переходы на страницы -->
+                    <p><a class="sidebar_link" href="http://10.101.0.44/startpage.php">
+                                    Главная</a></p>
                     <?php
                         if ($_COOKIE['user_privilege'] == 'root' or
                                 $_COOKIE['user_privilege'] == 'admin'){
                     ?>
-                            <p><a class="sidebar_link" href="http://10.101.0.44/computer.php">Компьютеры</a></p>
+                            <p><a class="sidebar_link" href="http://10.101.0.44/computer.php">
+                                    Компьютеры</a></p>
                     <?php
                         }    
                     ?>
@@ -46,22 +51,34 @@
                         if ($_COOKIE['user_privilege'] == 'root' or
                                 $_COOKIE['user_privilege'] == 'admin'){
                     ?>
-                            <p><a class="sidebar_link" href="http://10.101.0.44/tv.php">Телевидение</a></p>
+                            <p><a class="sidebar_link" href="http://10.101.0.44/tv.php">
+                                    Телевидение</a></p>
                     <?php
                         }    
                     ?>
-                      
+                    
                     <?php
                         if ($_COOKIE['user_privilege'] == 'root' or
                                 $_COOKIE['user_privilege'] == 'admin'){
                     ?>
-                            <p><a class="sidebar_link" href="http://10.101.0.44/adminka.php">Админка</a></p>
+                            <p><a class="sidebar_link" href="http://10.101.0.44/phone.php">
+                                    Телефония</a></p>
+                    <?php
+                        }    
+                    ?>
+                            
+                    <?php
+                        if ($_COOKIE['user_privilege'] == 'root' or
+                                $_COOKIE['user_privilege'] == 'admin'){
+                    ?>
+                            <p><a class="sidebar_link" href="http://10.101.0.44/adminka.php">
+                                    Админка</a></p>
                     <?php
                         }    
                     ?>
                 </td>
                 <td class="general_content">
-                    <header>
+                    <header class="general_content_header">
                         Это страница компьютеров
                     </header>
                 </td>

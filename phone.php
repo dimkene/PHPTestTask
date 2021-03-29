@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ТВ</title>
+        <title>Телефония</title>
         <link rel="stylesheet" href="assets/css/startpage_styles.css"/>
     </head>
     <header>
@@ -79,7 +79,7 @@
                 </td>
                 <td class="general_content">
                     <header class="general_content_header">
-                        Это страница телевидения
+                        Это страница телефонии
                     </header>
                 </td>
             </tr>

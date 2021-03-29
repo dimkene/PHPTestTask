@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (empty($_COOKIE['login'])){
+        header("Location: enter.php");
+    }
 ?>
 
 <!doctype html>
