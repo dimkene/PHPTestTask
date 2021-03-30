@@ -76,6 +76,16 @@
                     <?php
                         }    
                     ?>
+
+                    <?php
+                        if ($_COOKIE['user_privilege'] == 'root' or
+                                $_COOKIE['user_privilege'] == 'admin'){
+                    ?>
+                            <p><a class="sidebar_link" href="http://10.101.0.44/registration.php">
+                                    Регистрация нового пользователя</a></p>
+                    <?php
+                        }    
+                    ?>
                 </td>
                 <td class="general_content">
                     <header class="general_content_header">
