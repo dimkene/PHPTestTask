@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    require_once 'dbconnect.php';
+    require 'dbconnect.php';
     mysqli_set_charset($link, 'utf8');
     if (!empty($_SESSION['base_error'])){
         exit();
@@ -52,11 +52,11 @@
 
             if ($user_existing_check_temp == NULL)
             {
-                $insert_query = "INSERT INTO `User`(`Name`, `Surname`, `Patronymic`, `Login`, `Password`, `Privilege`) VALUES ('$name','$surname','$patronymic','$login','$pass','$privilege')";
+                $insert_query = "INSERT INTO `User` (`Name`, `Surname`, `Patronymic`, `Login`, `Password`, `Privilege`) VALUES ('$name','$surname','$patronymic','$login','$pass','$privilege')";
                 mysqli_query($link, $insert_query);
 
                 $_SESSION['error_msg'] = 'Новый пользователь успешно добавлен';
-                header("Location: ../enter.php");
+                header("Location: ../registration.php");
             } else {
                 $_SESSION['error_msg'] = 'Пользователь с таким логином уже есть';
                 header("Location: ../registration.php");

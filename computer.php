@@ -3,6 +3,8 @@
     if (empty($_COOKIE['login'])){
         header("Location: enter.php");
     }
+    require 'database/dbconnect.php';
+    mysqli_set_charset($link, 'utf8');
 ?>
 
 <!doctype html>
@@ -38,8 +40,8 @@
                     <p><a class="sidebar_link" href="http://10.101.0.44/startpage.php">
                                     Главная</a></p>
                     <?php
-                        if ($_COOKIE['user_privilege'] == 'root' or
-                                $_COOKIE['user_privilege'] == 'admin'){
+                        $user_priv = $_COOKIE['user_privilege'];
+                        if ($user_priv == 'root' or $user_priv == 'admin'){
                     ?>
                             <p><a class="sidebar_link" href="http://10.101.0.44/computer.php">
                                     Компьютеры</a></p>
@@ -48,8 +50,8 @@
                     ?>
                             
                     <?php
-                        if ($_COOKIE['user_privilege'] == 'root' or
-                                $_COOKIE['user_privilege'] == 'admin'){
+                        $user_priv = $_COOKIE['user_privilege'];
+                        if ($user_priv == 'root' or $user_priv == 'admin'){
                     ?>
                             <p><a class="sidebar_link" href="http://10.101.0.44/tv.php">
                                     Телевидение</a></p>
@@ -58,8 +60,8 @@
                     ?>
                     
                     <?php
-                        if ($_COOKIE['user_privilege'] == 'root' or
-                                $_COOKIE['user_privilege'] == 'admin'){
+                        $user_priv = $_COOKIE['user_privilege'];
+                        if ($user_priv == 'root' or $user_priv == 'admin'){
                     ?>
                             <p><a class="sidebar_link" href="http://10.101.0.44/phone.php">
                                     Телефония</a></p>
@@ -68,25 +70,16 @@
                     ?>
                             
                     <?php
-                        if ($_COOKIE['user_privilege'] == 'root' or
-                                $_COOKIE['user_privilege'] == 'admin'){
+                        $user_priv = $_COOKIE['user_privilege'];
+                        if ($user_priv == 'root' or $user_priv == 'admin'){
                     ?>
                             <p><a class="sidebar_link" href="http://10.101.0.44/adminka.php">
                                     Админка</a></p>
                     <?php
                         }    
                     ?>
-                                    
-                    <?php
-                        if ($_COOKIE['user_privilege'] == 'root' or
-                                $_COOKIE['user_privilege'] == 'admin'){
-                    ?>
-                            <p><a class="sidebar_link" href="http://10.101.0.44/registration.php">
-                                    Регистрация нового пользователя</a></p>
-                    <?php
-                        }    
-                    ?>
                 </td>
+                
                 <td class="general_content">
                     <header class="general_content_header">
                         Это страница компьютеров

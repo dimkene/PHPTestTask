@@ -11,7 +11,32 @@
         <meta charset="UTF-8">
         <title>Регистрация нового пользователя</title>
         <link rel="stylesheet" href="assets/css/reg_styles.css"/>
+        <link rel="stylesheet" href="assets/css/startpage_styles.css"/>
     </head>
+    <header>
+        <table class="header_styles">
+            <tr>
+                <td class="header_styles_left">
+                    <?php
+                        echo "Вы вошли как ".$_COOKIE['login']." с правами доступа ".
+                                $_COOKIE['user_privilege'];
+                    ?>
+                </td>
+                
+                <td class="header_styles_right">
+                    <form class="exit_form" action="adminka.php">
+                        <button >Назад</button>
+                    </form>
+                </td>
+                
+                <td class="header_styles_right">
+                    <form class="exit_form" action="database/exit.php" method="post">
+                        <button >Выход</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </header>
     <body>
         <!-- Форма регистрации -->
         
@@ -36,7 +61,6 @@
                 <option value="admin">Админ</option>
             </select>-->
             <input type="text" name='privilege' placeholder="Введите уровень привилегий">
-            <!--<input type="text" name='privileges' placeholder="Выберите уровень привилегий">-->
             <label>Логин</label>
             <input type="text" name='login' placeholder="Введите логин">
             <label>Пароль</label>

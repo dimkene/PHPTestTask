@@ -94,7 +94,7 @@
     vertical-align: top;
 }
 
-.upload_form > input {
+.upload_form > p > input {
     margin: 5px 0;
     padding: 5px;
     border: unset;
@@ -102,6 +102,12 @@
     border-bottom: 2px solid #e3e3e3;
     outline: none;
     color: #757575;
+}
+
+.upload_form > p > label {
+    margin: 5px 0;
+    padding: 5px;
+    width: 200px;
 }
 
 .upload_form > button {
@@ -114,4 +120,14 @@
     background: #778899;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.update_msg {
+    width: 100%;
+    height: 20px;
+    color: #757575;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
 }
